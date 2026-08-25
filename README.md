@@ -1,29 +1,30 @@
-# Triangle de Pascal — application console C++
+# Triangle de Pascal - application console C++
 
-Cette application C++ affiche les premières lignes du triangle de Pascal dans la console. Par défaut, elle en affiche 24.
+Cette application C++ affiche les premieres lignes du triangle de Pascal dans la console. Par defaut, elle affiche 24 lignes.
 
-## Principe
+## Fonctionnement
 
-Chaque valeur du triangle correspond à un coefficient binomial :
+Une valeur a la ligne `n` et a la position `k` est un coefficient binomial :
 
 ```text
-C(n, k) = n! / (k! × (n - k)!)
+C(n, k) = n! / (k! * (n - k)!)
 ```
 
-Les coefficients sont calculés de manière itérative, sans calculer directement les factorielles.
+Le programme calcule ces coefficients de maniere iterative, sans calculer directement les factorielles.
 
-## Prérequis
+## Prerequis
 
-- Visual Studio 2022 (ou version compatible) avec la charge de travail **Développement Desktop en C++** ;
-- le jeu d’outils MSVC v143 et le SDK Windows 10, tels que configurés dans le projet.
+- Visual Studio 2022, ou une version compatible ;
+- la charge de travail **Developpement Desktop en C++** ;
+- MSVC v143 et le SDK Windows 10, configures dans le projet.
 
-## Compilation et exécution
+## Compiler et executer
 
 1. Ouvrez `ConsoleApplicationPascalTriangle.sln` dans Visual Studio.
-2. Sélectionnez la configuration souhaitée (`Debug` ou `Release`) et la plateforme (`x64` ou `Win32`).
-3. Compilez et lancez le projet avec `F5` ou `Ctrl+F5`.
+2. Choisissez une configuration (`Debug` ou `Release`) et une plateforme (`x64` ou `Win32`).
+3. Compilez et lancez avec `F5` ou `Ctrl+F5`.
 
-Le programme affiche le triangle, puis attend une entrée clavier avant de se fermer.
+Le triangle est affiche dans la console. Le programme attend ensuite une touche avant de se fermer.
 
 ## Exemple de sortie
 
@@ -35,18 +36,18 @@ Le programme affiche le triangle, puis attend une entrée clavier avant de se fe
  1 4 6 4 1
 ```
 
-## Modifier le nombre de lignes
+## Changer le nombre de lignes
 
-Dans `ConsoleApplicationPascalTriangle/ConsoleApplicationPascalTriangle.cpp`, modifiez la valeur de `n` dans `main` :
+Dans `ConsoleApplicationPascalTriangle/ConsoleApplicationPascalTriangle.cpp`, modifiez la valeur de `n` dans la fonction `main` :
 
 ```cpp
 int n = 24;
 ```
 
-## Limite
+## Limites
 
-Les valeurs sont stockées dans un `long long`. Pour un nombre de lignes élevé, les coefficients binomiaux peuvent dépasser sa capacité et provoquer un dépassement d’entier.
+Les valeurs sont stockees dans un `long long`. Un nombre de lignes trop important peut donc provoquer un depassement d'entier.
 
 ## Licence
 
-Ce projet est distribué sous licence MIT. Consultez [LICENSE.txt](LICENSE.txt).
+Ce projet est distribue sous licence MIT. Consultez [LICENSE.txt](LICENSE.txt).
